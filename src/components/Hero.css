@@ -1,9 +1,13 @@
-/* Дизайн у Figma: фрейм 1440×960 */
+/* ---------- Базові (компактні) стилі, вузькі екрани ---------- */
 .hero {
   position: relative;
-  min-height: max(100vh, 720px);
+  min-height: 100vh;
   overflow: hidden;
   background: #fff;
+}
+
+.hero__stage {
+  position: relative;
 }
 
 .hero__art {
@@ -26,21 +30,29 @@
 .hero__header {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 48px;
-  padding: 24px 48px;
-  font-size: 28px;
+  gap: 16px 24px;
+  padding: 16px 24px;
+  font-size: 20px;
+}
+
+.hero__header a,
+.hero__status,
+.hero__name {
+  white-space: nowrap;
 }
 
 .hero__brand {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
   color: #4f4f4f;
 }
 
 .hero__logo {
-  display: block;
+  width: 48px;
+  height: 48px;
 }
 
 .hero__status {
@@ -51,17 +63,15 @@
 }
 
 .hero__nav {
-  margin-left: auto;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 30px;
-  font-size: 24px;
+  gap: 16px;
+  font-size: 18px;
 }
 
 .hero__write {
-  padding: 8px 13px;
-  min-width: 150px;
-  text-align: center;
+  padding: 8px 20px;
   background: #fff;
   border: 2px solid #000;
   border-radius: 20px;
@@ -69,14 +79,12 @@
 
 .hero__content {
   position: relative;
-  max-width: 889px;
-  margin-left: clamp(24px, 10vw, 144px);
-  padding-top: clamp(80px, 22vh, 190px);
+  padding: 48px 24px;
 }
 
 .hero__title {
   margin: 0;
-  font-size: 40px;
+  font-size: 28px;
   line-height: normal;
 }
 
@@ -84,7 +92,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  margin-top: 54px;
+  margin-top: 40px;
 }
 
 .btn {
@@ -105,33 +113,133 @@
   border: 2px solid #000;
 }
 
-.hero__header a,
-.hero__status,
-.hero__name {
-  white-space: nowrap;
-}
+/* ---------- Десктоп: точне розташування з Figma (фрейм 1440×960),
+   яке масштабується під ширину вікна через --s ---------- */
+@media (min-width: 1100px) {
+  .hero {
+    min-height: 0;
+    height: calc(960px * var(--s, 1));
+  }
 
-@media (max-width: 1279px) {
-  .hero__header {
-    flex-wrap: wrap;
-    gap: 16px 24px;
-    padding: 16px 24px;
-    font-size: 20px;
+  .hero__stage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1440px;
+    height: 960px;
+    transform: scale(var(--s, 1));
+    transform-origin: 0 0;
   }
-  .hero__nav {
-    margin-left: 0;
-    flex-wrap: wrap;
-    font-size: 18px;
-    gap: 16px;
+
+  .hero__art {
+    inset: auto;
+    left: -49px;
+    top: -529px;
+    width: 1902px;
+    height: 2018px;
   }
+
+  /* display: contents — щоб дочірні елементи позиціонувались відносно stage */
+  .hero__header,
+  .hero__nav,
+  .hero__content,
+  .hero__brand,
+  .hero__actions {
+    display: contents;
+  }
+
+  .hero__header a,
+  .hero__header p,
+  .hero__title,
+  .btn {
+    position: absolute;
+  }
+
   .hero__logo {
-    width: 48px;
-    height: 48px;
+    position: absolute;
+    left: 48px;
+    top: 24px;
+    width: 80px;
+    height: 80px;
   }
-  .hero__title {
+
+  .hero__name {
+    position: absolute;
+    left: 148px;
+    top: 47px;
     font-size: 28px;
+    line-height: normal;
   }
-  .hero__content {
-    padding-top: 48px;
+
+  .hero__status {
+    left: 306px;
+    top: 47px;
+    margin: 0;
+    font-size: 28px;
+    line-height: normal;
+    display: block;
+  }
+
+  .hero__status img {
+    position: absolute;
+    left: 0;
+    top: 10px;
+  }
+
+  .hero__status {
+    padding-left: 23px;
+  }
+
+  .hero__nav a {
+    top: 49px;
+    font-size: 24px;
+    line-height: normal;
+  }
+
+  .hero__link--cases {
+    left: 793px;
+  }
+  .hero__link--approach {
+    left: 885px;
+  }
+  .hero__link--about {
+    left: 979px;
+  }
+  .hero__link--contact {
+    left: 1111px;
+  }
+
+  .hero__nav .hero__write {
+    left: 1242px;
+    top: 40px;
+    width: 150px;
+    height: 47px;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    line-height: normal;
+  }
+
+  .hero__title {
+    left: 144px;
+    top: 311px;
+    width: 889px;
+    margin: 0;
+    font-size: 40px;
+    line-height: normal;
+  }
+
+  .btn {
+    top: 609px;
+    width: 400px;
+    height: 90px;
+  }
+
+  .btn--filled {
+    left: 144px;
+  }
+
+  .btn--outline {
+    left: 564px;
   }
 }
