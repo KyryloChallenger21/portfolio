@@ -1,7 +1,7 @@
-<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="Group 5">
-<circle id="Ellipse 2" cx="40" cy="40" r="40" fill="#D9D9D9"/>
-<line id="Line 1" x1="12.3484" y1="12.4414" x2="68.3484" y2="66.8414" stroke="black"/>
-<line id="Line 2" x1="67.6516" y1="12.4414" x2="11.6516" y2="66.8414" stroke="black"/>
+<circle id="Ellipse 2" cx="30" cy="30" r="30" fill="#D9D9D9"/>
+<line id="Line 1" x1="9.34839" y1="9.24136" x2="51.3484" y2="50.0414" stroke="black"/>
+<line id="Line 2" x1="50.6516" y1="9.24136" x2="8.65161" y2="50.0414" stroke="black"/>
 </g>
 </svg>

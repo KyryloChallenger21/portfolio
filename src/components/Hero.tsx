@@ -7,10 +7,10 @@ import './Hero.css'
 const DESIGN_WIDTH = 1440 // ширина фрейму у Figma
 
 const NAV = [
-  { label: 'кейси', href: '#cases', cls: 'hero__link--cases' },
-  { label: 'підхід', href: '#approach', cls: 'hero__link--approach' },
-  { label: 'про мене', href: '#about', cls: 'hero__link--about' },
-  { label: 'контакти', href: '#contact', cls: 'hero__link--contact' },
+  { label: "case", href: '#cases', cls: 'hero__link--cases' },
+  { label: "approach", href: '#approach', cls: 'hero__link--approach' },
+  { label: "about me", href: '#about', cls: 'hero__link--about' },
+  { label: "contacts", href: '#contact', cls: 'hero__link--contact' },
 ]
 
 export function Hero() {
@@ -36,7 +36,7 @@ export function Hero() {
 
         <header className="hero__header">
           <a className="hero__brand" href="#top">
-            <img className="hero__logo" src={logo} alt="" width={80} height={80} />
+            <img className="hero__logo" src={logo} alt="" width={60} height={60} />
             <span className="hero__name">Kir Klovan</span>
           </a>
           <p className="hero__status">
@@ -44,30 +44,28 @@ export function Hero() {
             Available for projects
           </p>
 
-          <nav className="hero__nav" aria-label="Головна навігація">
+          <nav className="hero__nav" aria-label="Main navigation">
             {NAV.map((item) => (
               <a key={item.href} className={item.cls} href={item.href}>
                 {item.label}
               </a>
             ))}
-            <a className="hero__write" href="mailto:drums21@ukr.net">
-              написати
-            </a>
+            <a className="hero__write" href="mailto:drums21@ukr.net">write</a>
           </nav>
         </header>
 
         <div className="hero__content">
-          <h1 className="hero__title">
-            З використанням АІ створюю та оновлюю дизайн сайтів, застосунків та
-            інтерфейси продуктів, знаходячи й усуваючи те, що заважає людям
-            зрозуміти продукт і зручно ним користуватися
-          </h1>
+          <h1 className="hero__title">Using AI I am create and update websites, apps and product interfaces</h1>
+          <p className="hero__lead">
+            finding and fixing whatever keeps people from understanding a product
+            and using it comfortably
+          </p>
           <div className="hero__actions">
             <a className="btn btn--filled" href="mailto:drums21@ukr.net">
-              Розказати про задачу
+              Describe the task
             </a>
             <a className="btn btn--outline" href="#cases">
-              Дивитись кейси
+              View the cases
             </a>
           </div>
         </div>

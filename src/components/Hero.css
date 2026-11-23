@@ -23,7 +23,7 @@
   max-width: none;
   aspect-ratio: 1694 / 1105;
   object-fit: cover;
-  opacity: 0.25;
+  opacity: 0.1;
   transform: rotate(-53deg);
 }
 
@@ -86,6 +86,13 @@
   margin: 0;
   font-size: 28px;
   line-height: normal;
+}
+
+.hero__lead {
+  margin: 16px 0 0;
+  font-size: 20px;
+  line-height: normal;
+  color: #6c6c6c;
 }
 
 .hero__actions {
@@ -151,6 +158,7 @@
   .hero__header a,
   .hero__header p,
   .hero__title,
+  .hero__lead,
   .btn {
     position: absolute;
   }
@@ -158,21 +166,21 @@
   .hero__logo {
     position: absolute;
     left: 48px;
-    top: 24px;
-    width: 80px;
-    height: 80px;
+    top: 34px;
+    width: 60px;
+    height: 60px;
   }
 
   .hero__name {
     position: absolute;
-    left: 148px;
+    left: 128px;
     top: 47px;
     font-size: 28px;
     line-height: normal;
   }
 
   .hero__status {
-    left: 306px;
+    left: 286px;
     top: 47px;
     margin: 0;
     font-size: 28px;
@@ -197,22 +205,22 @@
   }
 
   .hero__link--cases {
-    left: 793px;
+    left: 816px;
   }
   .hero__link--approach {
-    left: 885px;
+    left: 892px;
   }
   .hero__link--about {
-    left: 979px;
+    left: 1024px;
   }
   .hero__link--contact {
-    left: 1111px;
+    left: 1154px;
   }
 
   .hero__nav .hero__write {
-    left: 1242px;
+    left: 1278px;
     top: 40px;
-    width: 150px;
+    width: 114px;
     height: 47px;
     padding: 0;
     display: grid;
@@ -221,25 +229,33 @@
   }
 
   .hero__title {
-    left: 144px;
-    top: 311px;
+    left: 142px;
+    top: 381px;
     width: 889px;
     margin: 0;
     font-size: 40px;
     line-height: normal;
   }
 
+  .hero__lead {
+    left: 142px;
+    top: 496px;
+    width: 713px;
+    margin: 0;
+    font-size: 25px;
+  }
+
   .btn {
-    top: 609px;
+    top: 656px;
     width: 400px;
     height: 90px;
   }
 
   .btn--filled {
-    left: 144px;
+    left: 142px;
   }
 
   .btn--outline {
-    left: 564px;
+    left: 562px;
   }
 }
