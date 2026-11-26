@@ -47,10 +47,11 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  color: #4f4f4f;
+  color: #7b0000;
 }
 
 .hero__logo {
+  border-radius: 50%;
   width: 48px;
   height: 48px;
 }
@@ -72,7 +73,8 @@
 
 .hero__write {
   padding: 8px 20px;
-  background: #fff;
+  background: #7b0000;
+  color: #e6e6e6;
   border: 2px solid #000;
   border-radius: 20px;
 }
@@ -92,7 +94,7 @@
   margin: 16px 0 0;
   font-size: 20px;
   line-height: normal;
-  color: #6c6c6c;
+  color: #7b0000;
 }
 
 .hero__actions {
@@ -113,7 +115,8 @@
 }
 
 .btn--filled {
-  background: #959595;
+  background: #7b0000;
+  color: #e6e6e6;
 }
 
 .btn--outline {

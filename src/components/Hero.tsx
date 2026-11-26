@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef } from 'react'
 import heroArt from '../assets/hero-art.png'
-import logo from '../assets/logo.svg'
+import logo from '../assets/logo.png'
 import statusDot from '../assets/status-dot.svg'
 import './Hero.css'
 
