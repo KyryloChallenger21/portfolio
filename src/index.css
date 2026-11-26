@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'K2D';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/k2d-latin-700.woff2') format('woff2');
+}
+
 *,
 *::before,
 *::after {

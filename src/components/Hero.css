@@ -84,6 +84,13 @@
   padding: 48px 24px;
 }
 
+.hero__name,
+.hero__title,
+.hero__lead,
+.btn {
+  font-family: 'K2D', Inter, system-ui, sans-serif;
+}
+
 .hero__title {
   margin: 0;
   font-size: 28px;
